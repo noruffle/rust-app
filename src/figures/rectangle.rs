@@ -5,7 +5,7 @@ pub struct Rectangle {
   pub dimension: Option<(u32, u32)>,
 }
 
-impl Drawable for Rectangle {
+impl Drawable<u32> for Rectangle {
   fn check(&self) -> bool {
     self.dimension == None
   }

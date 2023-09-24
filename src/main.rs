@@ -1,6 +1,6 @@
 pub mod figures;
 
-use figures::{Rectangle, Drawable};
+use figures::{Rectangle, Circle, Drawable};
 
 fn main() {
 
@@ -10,6 +10,13 @@ fn main() {
     dimension: None,
   };
 
+  let circle = Circle {
+    radius: 5.0,
+  };
+
   rectangle.draw();
   rectangle.area_result();
+
+  circle.draw();
+  circle.area_result();
 }
