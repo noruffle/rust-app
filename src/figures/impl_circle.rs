@@ -1,7 +1,5 @@
-use crate::figures::Drawable;
-pub struct Circle {
-  pub radius: f32,
-}
+use super::trait_::Drawable;
+use super::struct_circle::Circle;
 
 impl Drawable<f32> for Circle {
   fn check(&self) -> bool {

@@ -1,9 +1,5 @@
-use crate::figures::Drawable;
-pub struct Rectangle {
-  pub width: u32,
-  pub height: u32,
-  pub dimension: Option<(u32, u32)>,
-}
+use super::trait_::Drawable;
+use super::struct_rectangle::Rectangle;
 
 impl Drawable<u32> for Rectangle {
   fn check(&self) -> bool {
