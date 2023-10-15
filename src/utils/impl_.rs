@@ -6,6 +6,19 @@ use super::trait_::TraitUtils;
 use super::struct_::Utils;
 
 impl TraitUtils for Utils {
+/*   fn largest<T>(list: &[T]) -> &T {
+    let mut largest = &list[0];
+
+    for item in list {
+        if item > largest {
+            largest = item;
+        }
+    }
+
+    largest
+} */
+
+
   fn converts_into_bytes(string: &str) {
     for bytes in string.bytes() {
       println!("{bytes}");

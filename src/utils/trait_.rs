@@ -6,4 +6,5 @@ pub trait TraitUtils {
   fn searching_vector(vector: &Vec<i32>, index: usize) -> Result<(), Box<dyn Error>>;
   fn converts_into_bytes(string: &str);
   fn open_txt(path: &str) -> Result<(), Box<dyn Error>>;
+//  fn largest<T>(list: &[T]) -> &T;
 }
