@@ -5,16 +5,6 @@ impl Rectangle<'_> {
   pub fn new(dimension: Option<(u32, u32)>) -> Self {
     Rectangle { title: "Rectangle", dimension }
   }
-
-  pub fn _draw(&self) {
-    let height = self.dimension.unwrap().0;
-    let weight = self.dimension.unwrap().1;
-  
-    println!(
-      "Рисуем прямоугольник шириной {} и высотой {}.",
-      weight, height
-    )
-  }
 }
 
 impl Area for Rectangle<'_> {
@@ -35,5 +25,17 @@ impl Area for Rectangle<'_> {
         result
       )
     }
+  }
+}
+
+#[cfg(test)]
+mod tests {
+  use super::*;
+
+  #[test]
+  fn test_of_rectangle() {
+    let rec = Rectangle::new(Some((40, 40)));
+    
+    rec.area()
   }
 }
