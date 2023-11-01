@@ -5,34 +5,27 @@ mod articles;
 
 use guess::{Guess, TraitGuess};
 use utils::{Utils, TraitUtils};
-use figures::{Circle, Rectangle, Drawable};
+use figures::{Circle, Rectangle, Area};
 use articles::{Summary, Comment};
 
 use crate::articles::Anime;
 
 fn main() {
   let vec = vec![10000, 2, 99, 4, 100, 55];
-  let switch = 5;
+  let switch = 3;
 
   match switch {
     1 => Guess{status: true}.check(),
     2 => Utils::multiplying(vec),
     3 => {
-      let rec = Rectangle {
-        height: 100,
-        width: 200,
-        dimension: None,
-      };
 
-      let cir = Circle {
-        radius: 25.0,
-      };
+      let cir = Circle::new(25.0);
 
-      rec.area();
-      rec.draw();
-
+      let rec = Rectangle::new(Some((200, 200)));
+      
       cir.area();
-      cir.draw();
+      rec.area();
+
     },
     4 => {
       let comment = Comment {

@@ -1,6 +1,6 @@
-pub trait Drawable<T> {
+pub trait Area {
+
   fn check(&self) -> bool;
-  fn draw(&self);
-  fn area(&self) -> T;
-  fn area_result(&self);
+
+  fn area(&self);
 }

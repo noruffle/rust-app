@@ -1,5 +1,4 @@
-pub struct Rectangle {
-  pub width: u32,
-  pub height: u32,
-  pub dimension: Option<(u32, u32)>,
+pub struct Rectangle<'a> {
+  pub title: &'a str,
+  pub dimension: Option<(u32, u32)>
 }
