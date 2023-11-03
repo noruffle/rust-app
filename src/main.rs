@@ -2,6 +2,7 @@ mod figures;
 mod utils;
 mod guess;
 mod articles;
+mod users;
 
 use guess::{Guess, TraitGuess};
 use utils::{Utils, TraitUtils};
