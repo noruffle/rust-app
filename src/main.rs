@@ -1,23 +1,37 @@
-mod figures;
-mod utils;
-mod guess;
-mod articles;
+mod guess; 
+use guess::{
+  Guess, TraitGuess
+};
+
+mod utils; 
+use utils::{
+  Utils, TraitUtils
+};
+
+mod figures; 
+use figures::{
+  Circle, Rectangle, Area
+};
+
+mod articles; 
+use articles::{
+  Summary, Comment, Anime
+};
+
+mod shop; 
+use shop::{
+  Inventory, User, Color
+};
+
+mod cline; 
+use cline::{smth, search};
+
 mod tests;
-mod cline;
-mod shop;
 
-use guess::{Guess, TraitGuess};
-use utils::{Utils, TraitUtils};
-use figures::{Circle, Rectangle, Area};
-use articles::{Summary, Comment};
-use cline::*;
-use shop::{struct_::Inventory, enum_::Color};
-
-use crate::{articles::Anime, shop::struct_::User};
 
 fn main() {
   let vec: Vec<i32> = vec![10000, 2, 99, 4, 100, 55];
-  let switch: i32 = 6;
+  let switch: i32 = 7;
 
   match switch {
     1 => Guess{status: true}.check(),
@@ -47,14 +61,14 @@ fn main() {
         genres: String::from("Comedy, Domance"),
         episodes: 24,
         status: "Finished".to_string(),
-      };
+      }; 
 
       println!("New anime started! {}", anime.summarize());
 
 
     },
     5 => {
-      search_for_env()
+      smth()
     },
     6 => {
       let store: Inventory = Inventory {
@@ -69,7 +83,11 @@ fn main() {
       let giveaway_ruffle: Color = store.giveaway(ruffle_preference);
 
       println!("The user {:?} with preference {:?} gets {:?}", ruffle.name, ruffle_preference, giveaway_ruffle);
-    }
+    },
+    7 => {
+      let (query, cx) = ("safe", "fast");
+      search(query, cx);
+    },
     _ => println!("Try again")
 
   }

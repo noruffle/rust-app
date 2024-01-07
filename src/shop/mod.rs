@@ -1,3 +1,8 @@
-pub mod enum_;
-pub mod struct_;
-pub mod impl_;
+mod enum_;
+mod struct_;
+mod impl_;
+
+pub use struct_::Inventory;
+pub use struct_::User;
+
+pub use enum_::Color;

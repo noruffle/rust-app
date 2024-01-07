@@ -1,7 +1,8 @@
-//use std::env;
+mod command;
+mod fn_comm;
+mod impl_comm;
+mod struct_comm;
 
-pub fn search_for_env() {
-  //let args: Vec<String> = env::args().collect();
-
-  //dbg!(args);
-}
+pub use struct_comm::Config;
+pub use impl_comm::{run, search};
+pub use fn_comm::smth;
