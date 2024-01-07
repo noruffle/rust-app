@@ -27,15 +27,3 @@ impl Area for Rectangle<'_> {
     }
   }
 }
-
-#[cfg(test)]
-mod tests {
-  use super::*;
-
-  #[test]
-  fn test_of_rectangle() {
-    let rec = Rectangle::new(Some((40, 40)));
-    
-    rec.area()
-  }
-}

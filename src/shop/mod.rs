@@ -1,8 +1,9 @@
-mod enum_;
-mod struct_;
-mod impl_;
+mod shop_example;
+mod shop_struct;
+mod shop_enum;
 
-pub use struct_::Inventory;
-pub use struct_::User;
-
-pub use enum_::Color;
+pub use {
+  shop_enum::Shirt,
+  shop_struct::Inventory,
+  shop_example::store,
+};

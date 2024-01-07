@@ -1,7 +1,6 @@
 /* Traits mods */
 mod trait_;
 
-
 /* Struct mods */
 mod struct_rectangle;
 mod struct_circle;
@@ -11,9 +10,8 @@ mod impl_rectangle;
 mod impl_circle;
 
 /* Use trait */
-pub use self::trait_::Area;
-
-
-/* Use struct */
-pub use self::struct_rectangle::Rectangle;
-pub use self::struct_circle::Circle;
+pub use {
+  trait_::Area,
+  struct_circle::Circle,
+  struct_rectangle::Rectangle,
+};
